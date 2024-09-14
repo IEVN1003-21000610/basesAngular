@@ -1,5 +1,5 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
-
+#Aqui se especifica que archivo no queremos que se vaya a repositorio
 # Compiled output
 /dist
 /tmp

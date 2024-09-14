@@ -1,0 +1,13 @@
+p{
+    color:blueviolet;
+}
+
+
+h1
+{
+    color:brown;
+    font-size: 100px;
+    background-color: black;
+    /*border-radius: 15%;*/
+    border-color: blue;
+}
