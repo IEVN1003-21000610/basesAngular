@@ -1,58 +1,55 @@
 import { Component } from '@angular/core';
+import { IProducto } from '../product';
 
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  //styleUrl:
-  // <!--template:`
-  // <div class="container">
-  //   <h1>{{title}}</h1>
-  // </div>
-  // `,
-  styleUrl: './product-list.component.css'
+  selector: 'app-product-list', //manera de llamar a otros componentes 
+  templateUrl: './product-list.component.html', 
+  styleUrl: './product-list.component.css' //referencia de los archivos de estilo
 })
-export class ProductListComponent {
-  title="Saludo de variable";
-
-  imageWidth:number=50;
-  imageMargi:number=2;
-  muestraImg:boolean=true;
+export class ProductListComponent
+{
+  title = "Saluno de variable";
+  imageWidth:number = 50;
+  imageMargi:number = 2;
+  muestraImg:boolean = true;
   listFilter:string='';
 
-
-  showImage():void{
-    this.muestraImg=!this.muestraImg;
-  }
-
-  productos:any[]=[
-   {
-     "productoId":1,
-     "Modelo":'Sentra',
-     "Descripcion":"4 puertas familiar",
-     "year":"febrero 3 2022",
-     "Precio":"250000",
-     "Marca":"Nissan",
-     "Color":"Morado",
-     "imagenUrl":"https://th.bing.com/th/id/OIP.rmAdxrdv7dqcT0YU8r9dVAHaEI?w=324&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7"
-   },
-   {
-    "productoId":2,
-    "Modelo":'A4',
-    "Descripcion":"2 puertas",
-    "year":"marzo 3 2023",
-    "Precio":"300000",
-    "Marca":"Toyota",
-    "Color":"Blanco",
-    "imagenUrl":"https://th.bing.com/th/id/OIP.y-YNEl7I6tFu96qWv9URQQHaE8?w=244&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7"
-  },
+  showImage():void
   {
-    "productoId":3,
-    "Modelo":'Xd16',
-    "Descripcion":"2 puertas",
-    "year":"30 de junio del 2003",
-    "Precio":"450000",
-    "Color":"Rosa",
-    "imagenUrl":"https://th.bing.com/th/id/OIP.4KAD9QGw7F1sbWbqT62MfwHaEK?w=277&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7"
+    this.muestraImg = !this.muestraImg;
   }
+
+  productos:IProducto[] = 
+  [
+    {
+      "productoId":1,
+      "Modelo": 'Porsche 911 Carrera S',
+      "Descripcion": "2 puertas",
+      "year": "marzo 18 2024",
+      "Precio": 1000000,
+      "Marca": "Porsche",
+      "Color": "Rojo",
+      "imagenUrl": "https://vehicle-images.dealerinspire.com/d4e3-11000617/WP0AB2A90RS221428/dc653ab98d0bc35232d0cc2ef06682e9.jpg"
+    },
+    {
+      "productoId":2,
+      "Modelo": 'Lamborghini Diablo',
+      "Descripcion": "2 puertas",
+      "year": "30 Junio 2024",
+      "Precio": 2000000,
+      "Marca": "Lamborghini",
+      "Color": "Amarillo",
+      "imagenUrl": "https://a.d-cd.net/b98fg1s-1920.jpg"
+    },
+    {
+      "productoId":3,
+      "Modelo": 'Corvette C4 1990',
+      "Descripcion": "2 puertas",
+      "year": "3 de Enero 1990",
+      "Precio": 3000000,
+      "Marca": "Chevrolet",
+      "Color": "Rojo",
+      "imagenUrl": "https://www.corvsport.com/wp-content/uploads/2017/02/1990_Chevrolet_Corvette_ZR1_Coupe__C_4__supercar_muscle__r_1600x1200.jpg"
+    } 
   ]
 }

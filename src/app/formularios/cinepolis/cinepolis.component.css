@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fbe7f3;
+    color: #a94d7b;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffe3ec;
+    width: 450px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 2px solid #f9b3d1;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #d45c8c;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/*.logo {
+    margin-bottom: 20px;
+    background: url('cinepolis-logo.png') no-repeat center;
+    height: 100px;
+    background-size: contain;
+}*/
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+section {
+    width: 45%;
+}
+
+h3 {
+    border-bottom: 1px solid #d45c8c;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #d45c8c;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #d8a7b6;
+    background-color: #f9f0f5;
+    color: #a94d7b;
+}
+
+.radio-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.radio-group input {
+    margin-right: 5px;
+}
+
+.radio-group label {
+    font-size: 14px;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.actions button {
+    background-color: #d45c8c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.actions button:hover {
+    background-color: #f078a3;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #a94d7b;
+}

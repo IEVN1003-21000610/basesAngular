@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cinepolis.component.css">
+    <title>Cinépolis</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Cinépolis</div>
+        <div class="logo"></div>
+        <div class="box">
+            <section>
+                <h3>Entradas</h3>
+                <label for="nombre">Nombre:</label>
+                <input type="text" [(ngModel)]='clientenombre' id="nombre" name="nombre">
+                
+                <label for="cantidad">Cantidad de Compradores: </label>
+                <input type="number" [(ngModel)]='compradores' id="cantidad" name="cantidad">
+                
+                <label>Tarjeta CINECO:</label>
+                <div class="radio-group">
+                    <input type="radio" id="si" [(ngModel)]='tarejetacine' name="cineco" value="si">
+                    <label for="si">Sí</label>
+                    <input type="radio" id="no" name="cineco" value="no">
+                    <label for="no">No</label>
+                </div>
+
+                <label for="boletos">Cantidad de Boletos: </label>
+                <input type="number" [(ngModel)]='boletosnum' id="boletos" name="boletos">
+                {{mensaje1max}}
+            </section>
+            <section>
+                <h3>Salidas</h3>
+                <label for="total">Valor a Pagar: </label>
+                <input type="text" [(ngModel)]='totalxd' id="pago" name="pago" readonly>
+                {{mensaje2imp}}
+            </section>
+        </div>
+        <div class="actions">
+            <button type="button" (click)="calculos()">Procesar</button>
+            <button type="button">Salir</button>
+        </div>
+        <div class="footer">
+            <p>© Cinépolis - Películas de gran alcance</p>
+        </div>
+    </div>
+</body>
+</html>
