@@ -3,28 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="./cinepolis.component.css">-->
-    <title>RESISTENCIAS</title>
+    <link rel="stylesheet" href="./resistencias-angular.component.css">
+    <title>Cinépolis</title>
 </head>
-<body>
 
-    <div class="container">
-        <div class="title">RESISTENCIAS</div>
-        <div class="box">
-            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                <option selected>Selecciona una opcion</option>
-                <option value="1">Negro</option>
-                <option value="2">Cafe</option>
-                <option value="3">Rojo</option>
-                <option value="3">Naranja</option>
-                <option value="3">Amarillo</option>
-                <option value="3">Verde</option>
-                <option value="3">Azul</option>
-                <option value="3">Violeta</option>
-                <option value="3">Gris</option>
-                <option value="3">Blanco</option>
-            </select>
+<body>
+    <div class="container" [formGroup]="formulario">
+        <div class="input-group">
+          <label for="color1">Primera Banda</label>
+          <select id="color1" formControlName="color1">
+            <option value="negro">Negro</option>
+            <option value="cafe">Café</option>
+            <option value="rojo">Rojo</option>
+            <option value="naranja">Naranja</option>
+            <option value="amarillo">Amarillo</option>
+            <option value="verde">Verde</option>
+            <option value="azul">Azul</option>
+            <option value="violeta">Violeta</option>
+            <option value="gris">Gris</option>
+            <option value="blanco">Blanco</option>
+          </select>
         </div>
+      
+        <div class="input-group">
+          <label for="color2">Segunda Banda</label>
+          <select id="color2" formControlName="color2">
+            <option value="negro">Negro</option>
+            <option value="cafe">Café</option>
+            <option value="rojo">Rojo</option>
+            <option value="naranja">Naranja</option>
+            <option value="amarillo">Amarillo</option>
+            <option value="verde">Verde</option>
+            <option value="azul">Azul</option>
+            <option value="violeta">Violeta</option>
+            <option value="gris">Gris</option>
+            <option value="blanco">Blanco</option>
+          </select>
+        </div>
+      
+        <div class="input-group">
+          <label for="color3">Tercera Banda</label>
+          <select id="color3" formControlName="color3">
+            <option value="negro">Negro</option>
+            <option value="cafe">Café</option>
+            <option value="rojo">Rojo</option>
+            <option value="naranja">Naranja</option>
+            <option value="amarillo">Amarillo</option>
+            <option value="verde">Verde</option>
+            <option value="azul">Azul</option>
+            <option value="violeta">Violeta</option>
+            <option value="gris">Gris</option>
+            <option value="blanco">Blanco</option>
+          </select>
+        </div>
+      
+        <div class="input-group">
+          <label for="tolerancia">Tolerancia</label>
+          <div>
+            <input type="radio" id="oro" formControlName="tolerancia" value="oro" checked>
+            <label for="oro">Oro</label>
+            <input type="radio" id="plata" formControlName="tolerancia" value="plata">
+            <label for="plata">Plata</label>
+          </div>
+        </div>
+      
+        <button id="registrar" (click)="mostrar()">Registrar</button>
     </div>
+    
+  
+  <div class="table-responsive">
+    <table id="resultados">
+      <thead>
+        <tr>
+          <th>Color1</th>
+          <th>Color2</th>
+          <th>Color3</th>
+          <th>Tolerancia</th>
+          <th>Valor</th>
+          <th>Valor Máximo</th>
+          <th>Valor Mínimo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let resistencia of seleccionados">
+          <td>{{resistencia.color1}}</td>
+          <td>{{resistencia.color2}}</td>
+          <td>{{resistencia.color3}}</td>
+          <td>{{resistencia.tolerancia}}</td>
+          <td>{{resistencia.valor}}</td>
+          <td>{{resistencia.valorMaximo}}</td>
+          <td>{{resistencia.valorMinimo}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </body>
-</html>
+
